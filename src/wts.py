@@ -2,7 +2,7 @@
 
 import sqlite3
 
-def write_to_schema(data_file:str, sqlite_file:str):
+def wts(data_file:str, sqlite_file:str):
     """
     pre: - Introduire le nom du fichier sql que l'on veut 
             mettre dans le schema : `data_file` et le fichier
