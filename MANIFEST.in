@@ -1,0 +1,2 @@
+include src/*.sql
+include src/*.sqlite

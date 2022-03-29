@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/wts/__init__.py
+src/wts/exemple.py
+src/wts/wts.py
+src/wts.egg-info/PKG-INFO
+src/wts.egg-info/SOURCES.txt
+src/wts.egg-info/dependency_links.txt
+src/wts.egg-info/top_level.txt
