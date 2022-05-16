@@ -2,30 +2,42 @@
 
 import sqlite3
 
-
-def wts(data_file:str, sqlite_file:str):
+class Wts:
     """
-    @pre: - Enter the sql file name wich contains all the sql 
-            instructions : `data_file` and the sqlite file name : `sqlite_file`
-    @post: - The sqlite file is created and filled with the data from the
+    WTS class
+    This class is used to manage sqlite database
+    The main purpose of this class is to execute sql commands
     """
-    # Access to the sqlite file
-    conn = sqlite3.connect(sqlite_file)
+    def __init__(self, sqlite_path:str):
+        """
+        Initialize the connection to the sqlite db and create the cursor
+        """
+        self.sqlite_path = sqlite_path
+        self.conn = sqlite3.connect(self.sqlite_path)
+        self.cursor = self.conn.cursor()
 
-    # the cursor is used to execute the sql instructions
-    cursor = conn.cursor()
+    def __del__(self):
+        """
+        Stop the connection to the sqlite db
+        """
+        self.conn.close()
+    
+    ################################################################################
+    # The function that read and execute sql command from sql file in the sqlite db
+    # @param sql_file_path: the path of the sql file
+    # @return: None
+    # @exception: None
+    # @note: None
+    # @example: None
+    ################################################################################
 
-    with open (data_file,'r') as dataf: 
-
-        for lines in dataf:
-            the_insert = lines.split(";")   
-            cursor.execute('''{}'''.format(the_insert[0]))
-
-    # If the data is inserted, commit the changes
-    conn.commit()
-
-    # close the connection to the database
-    conn.close()
-
-
-
+    def execute_sql_file(self, sql_file_path:str):
+        """
+        Execute the sql command from the sql file in the sqlite db
+        """
+        with open(sql_file_path, 'r') as f:
+            sql_commands = f.read()
+        self.cursor.executescript(sql_commands)
+        self.conn.commit()
+        self.__del__()
+                                                                                               
