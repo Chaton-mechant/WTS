@@ -6,24 +6,29 @@
 ``wts`` is a tiny python package which provides a simple way to write in `sqlite` files with `sql` insert files.
 
 Use ``pip`` to install:
-```
+```bash
 pip install wts
 ```
 
 Here is a simple example:
 
 ```python
-from wts import wts
+from wts import Wts
+# intialize the Wts object
 
-wts.wts("cows_inserts.sql", "cows.sqlite")
+wr = Wts("cows.sqlite")
+wr.execute_sql_file("cows_data.sql")
+# cows.sqlite in filled with the data from cows_data.sql
 
-# cows.sqlite and cows_inserts.sql are created
+# OR you can do it like this:
+Wts("cows.sqlite").execute_sql_file("cows_data.sql")
+
 ```
 
 ### WARNINGS :
 
-- Yours commands must be valid sql insert commands
-
 - Yours sql files must be in the same directory as the database file
+
+- If the slite file does not exist, it will be created
 
 If you have any issues, please open an issue [Here](https://github.com/Chaton-mechant/WTS/issues)
