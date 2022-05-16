@@ -1,2 +1,2 @@
-include src/*.sql
-include src/*.sqlite
+include src/wts/*.sql
+include src/wts/*.sqlite

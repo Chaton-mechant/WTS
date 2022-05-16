@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="wts",
-    version="1.0.0",
+    version="1.0.1",
     author=" Lux Luth",
     author_email="luxusluth@gmail.com",
     description="wts is a small packages for write sql statements in a sqlite database",

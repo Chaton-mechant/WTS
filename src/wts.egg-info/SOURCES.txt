@@ -6,6 +6,10 @@ setup.cfg
 setup.py
 src/wts/__init__.py
 src/wts/exemple.py
+src/wts/exemple.sql
+src/wts/exemple.sqlite
+src/wts/exemple_cmd.sql
+src/wts/exemple_database.sqlite
 src/wts/wts.py
 src/wts.egg-info/PKG-INFO
 src/wts.egg-info/SOURCES.txt
