@@ -3,7 +3,7 @@
 
 [![Pypi](https://img.shields.io/badge/VERSION-0.0.1-blue?style=for-the-badge&logo=pypi)](https://pypi.org/project/wts/)
 
-``wts`` is a tiny python package which provides a simple way to write in `sqlite` files with `sql` insert files.
+``wts`` is a tiny python package which provides a simple way to write in `sqlite` files with `sql` files.
 
 Use ``pip`` to install:
 ```bash
