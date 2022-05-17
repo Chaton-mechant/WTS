@@ -21,7 +21,7 @@ wr.execute_sql_file("cows_data.sql")
 # cows.sqlite in filled with the data from cows_data.sql
 
 # OR you can do it like this:
-Wts("cows.sqlite").execute_sql_file("cows_data.sql")
+wts.Wts("cows.sqlite").execute_sql_file("cows_data.sql")
 
 ```
 
