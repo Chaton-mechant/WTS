@@ -16,12 +16,12 @@ Here is a simple example:
 from wts import wts
 # intialize the Wts object
 
-wr = wts.Wts("cows.sqlite")
-wr.execute_sql_file("cows_data.sql")
+wr = wts.Wts("src/cows.sqlite")
+wr.execute_sql_file("src/cows_data.sql")
 # cows.sqlite in filled with the data from cows_data.sql
 
 # OR you can do it like this:
-wts.Wts("cows.sqlite").execute_sql_file("cows_data.sql")
+wts.Wts("src/cows.sqlite").execute_sql_file("src/cows_data.sql")
 
 ```
 
