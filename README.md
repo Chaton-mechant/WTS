@@ -13,10 +13,10 @@ pip install wts
 Here is a simple example:
 
 ```python
-from wts import Wts
+from wts import wts
 # intialize the Wts object
 
-wr = Wts("cows.sqlite")
+wr = wts.Wts("cows.sqlite")
 wr.execute_sql_file("cows_data.sql")
 # cows.sqlite in filled with the data from cows_data.sql
 
